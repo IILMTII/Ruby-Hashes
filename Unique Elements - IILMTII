@@ -1,0 +1,14 @@
+def unique_elements(arr)
+   hash=Hash.new(0)
+  new=[]
+  arr.each do |char|
+    hash[char]+=1
+    if hash[char]<=1
+      new<<char
+    end
+  end
+  return new
+end
+
+print unique_elements(['a', 'b', 'a', 'a', 'b', 'c']) #=> ["a", "b", "c"]
+puts
